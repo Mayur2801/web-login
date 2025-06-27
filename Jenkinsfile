@@ -68,7 +68,7 @@ pipeline {
                         sudo docker rm myweb || true
                         sudo docker run -d --name myweb -p 80:80 $DOCKER_IMAGE:$APP_VERSION
                         EOF
-                    """
+                    '''
                 }
             }
         }
