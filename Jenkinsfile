@@ -53,7 +53,7 @@ pipeline {
             steps {
                 sshagent([SSH_KEY]) {
                     sh """
-                        ssh -o StrictHostKeyChecking=no ec2-user@ec2-44-203-74-121.compute-1.amazonaws.com <<EOF
+                        ssh -o StrictHostKeyChecking=no ec2-user@ec2-44-203-74-121.compute-1.amazonaws.com << 'EOF'
                         if ! command -v docker &> /dev/null; then
                             echo "Installing Docker..."
                             sudo yum update -y
@@ -67,7 +67,7 @@ pipeline {
                         sudo docker stop myweb || true
                         sudo docker rm myweb || true
                         sudo docker run -d --name myweb -p 80:80 $DOCKER_IMAGE:$APP_VERSION
-EOF
+                        EOF
                     """
                 }
             }
