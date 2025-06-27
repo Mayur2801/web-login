@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Success</title>
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1605363066720-5b729db2b881?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+            background-size: cover;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .message-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            alert("🎉 Registration successful! Welcome, {{ user }}.");
+        }
+    </script>
+</head>
+<body>
+    <div class="message-box">
+        <h1>Welcome, {{ user }}!</h1>
+        <p>Your account has been created successfully.</p>
+        <p><a href="/">Click here to login</a></p>
+    </div>
+</body>
+</html>
